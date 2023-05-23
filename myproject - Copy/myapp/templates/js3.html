@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <input type="text" placeholder="Enter 1st no" id="t1" />
+        <input type="text" placeholder="Enter 2nd no" id="t1" />
+        <button onclick="calculate(this.innerHTML)">Add</button>
+        <button onclick="calculate(this.innerHTML)">Sub</button>
+        <button onclick="calculate(this.innerHTML)">Mul</button>
+        <button onclick="calculate(this.innerHTML)">Div</button>
+        <p id="result"></p>
+        </body>
+        <script>
+            function calculate(op){
+                let n1=document.getElementById("t1").value;
+                let n2=doument.getElementById("t2").value;
+                let n3;
+                if(op=="Add")
+                    n3=Number(n1)+Number(n2);
+                else if(op=="Sub")
+                    n3=n1-n2;
+                else if(op=="Mul")
+                    n3=n1*n2;
+                else
+                    alert("error");
+            doument.getElementById("result").InnerHTML+=op +" of "+ n1+ " and "+ n2+" is "+n3+"<br>";
+            }
+        </script>
+    </body>
+</html>

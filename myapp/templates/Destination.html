@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="row p-5">
+    <div class="col-md-12">
+        <h2>Destinations</h2>
+    </div>
+
+{% for b in d %}
+<div class="col-sm-6">
+ 
+    <!-- colored -->
+    <div class="ih-item square colored effect4 mb-4"><a href="#">
+        <div class="img"><img src="/media/{{ b.photo1 }}" alt="img"></div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>{{ b.name}}</h3>
+          <p>{{ b.addresslocation}} ({{ b.state }})</p>
+        </div></a></div>
+    <!-- end colored -->
+ 
+  </div>
+
+
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+#topheader{
+    background: rgba(0, 0, 0, 0.6) url('3.jpeg');
+    background-size: cover;
+    padding: 50px 50px 200px 50px;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    
+   
+
+}  
+#topheader1{
+    background: rgba(0, 0, 0, 0.6) url('3.jpeg');
+    background-size: cover;
+    padding: 50px ;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-position: center ;
+   
+
+}  
+/*.nav li a{
+color: white !important;
+}*/
+.price{
+        position: relative;
+        top: -50px;
+        padding: 5px 10px;
+        font-weight: bold;
+        color: white;
+        display: inline;
+   
+}
+#contact-left{
+background-image: url(1.jpg);
+background-size: cover;
+
+height: 500px;
+}
+#contact-right{
+    background-image: url(2.jpg);
+    background-size: cover;
+    
+    height: 500px;
+    }
+#backcover{
+        background: rgba(0,0,0,0.9);
+        padding: 100px;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+      }
+#bg10{
+    background: url(bg.jpeg);
+    background-size:cover;
+    width: 100%;
+    
+
+}
+#bannerimg{
+    background:url('images/banner.jpg');
+    background-size:cover;
+}
+#subbannerimg{
+    background:rgba(0,0,0,0.4);
+    padding:200px 100px 200px 100px;
+}
+
+.blog a{
+    color:black;
+    text-decoration:none;
+}
+
+#bg11{
+    background:url('bg.jpeg');
+    background-size:cover;
+    padding: 50px;
+    background-attachment: fixed;
+}
+
+.accordion-item{
+    background: white;
+}
+      
+.milestone-counter .fa{
+    font-size:42px;
+}
+.counter{
+    font-size:33px;
+    color:#0bbbcc;
+    padding: 10px;
+}
+.hotelsubdiv{
+    overflow: hidden;
+}
+
+.hoteldiv img{
+    transition: 0.5s all ease-in-out;
+}
+.hoteldiv:hover img{
+    transform: scale(1.2);
+    
+}
+.hoteldiv h3, .hoteldiv p{
+    color:white;
+}
+ .hoteldiv p {
+    color:#ed3528;
+}
+#kerala{
+    background:rgba(0,0,0,0.5) url('kkd.jpg');
+    padding: 200px 10px 10px 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+}
+
+#jk{
+    background:rgba(0,0,0,0.5) url('jkk.jpg');
+    padding: 200px 10px 10px 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+}
+#hp{
+    background:rgba(0,0,0,0.5) url('hhh.jpg');
+    padding: 200px 10px 10px 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+}
+#guj{
+    background:rgba(0,0,0,0.5) url('ggg.jpg');
+    padding: 200px 10px 10px 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+}
+
+#menu a{
+    color:black;
+    
+}

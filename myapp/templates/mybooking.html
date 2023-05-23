@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="row p-5">
+    <div class="col-md-12">
+        <h2>Manage Bookings</h2>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Srno</th>
+            <th>No of Children</th>
+            <th>No of Adults</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+            <th>Tour</th>
+            <th>Instructions</th>
+            <th>Status</th>
+        </tr>
+    {% for b in m %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ b.No_of_Children }}</td>
+        <td>{{ b.No_of_Adults }}</td>
+        <td>{{ b.CheckIn }}</td>
+        <td>{{ b.Checkout }}</td>
+        <td>{{ b.Tourtype }}</td>
+        <td>{{ b.instructions }}</td>
+        <td>{{ b.status }}
+            <br>
+            {% if b.status == 'Booked' %}
+            <a href="/edit/{{ b.id }}">
+            <button class="btn btn-danger">Cancel Booking</button>
+        </a>
+            {% endif %}
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+    </div>
+    {% endblock %}  

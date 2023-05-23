@@ -1,0 +1,16 @@
+
+<html>
+<body>
+   <input type="text" placeholder="enter name" id="name" />
+   <button onclick="f()">click</button>
+   <p id="result"></p>
+</body>
+<script>
+    function f()
+    {
+        let n=document.getElementByID("name").value; //getvalue
+        document.getElementById("result").innerHTML+="welcome"+n+"<br>"; //setvalue
+        document.getElementById("name").value="";//set
+    }
+    </script>
+    </html>

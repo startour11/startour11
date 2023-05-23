@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div class="row p-5">
+    <div class="col-md-12">
+        <h2>tour</h2>
+    </div>
+
+<div class="col-md-6 p-3 tourdiv">
+    <!--colored-->
+
+     
+       <div class="col-md-12 p-3 bg-dark text-light ">
+        <h3>{{ b.title }}</h3>
+        <h3>{{ b.type }}</h3>
+        <p>{{ b.noofdays }}</p>
+        <p class="text-light">{{ b.description|safe }}</p>
+        
+        
+
+        
+
+        
+        
+
+     </div> 
+        
+
+    <!--end colored-->
+</div>
+
+
+
+<div class="col-md-6 p-3">
+    <img src="/media/{{b.Image}}" height="400" width="90%" />
+    <h3 class="text-center p-3"><span>&#8377</span>{{ b.price }}</h3>
+ </div>
+
+ </div>
+{% endblock %}
+

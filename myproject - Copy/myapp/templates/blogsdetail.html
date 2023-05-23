@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12 p-5">
+        <h2>{{ blg.title }}</h2>
+    </div>
+
+    <div class="col-md-8 offset-2 p-3 blogs">
+
+        
+        <img src="/media/{{ blg.photo }}" width="100%">
+        <p>{{ blg.description|safe }}</p>
+        <p>By: {{ blg.post_by }} ({{ blg.post_on }})</p>
+    </div>
+        
+    </div>
+
+    {% endblock %}

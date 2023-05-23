@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div class="row p-5">
+    <div class="col-md-12">
+        <h2>tour</h2>
+    </div>
+
+{% for b in t %}
+<div class="col-md-6 p-3 tourdiv">
+    <!--colored-->
+    <a href="/tourdetail/{{ b.id }}" class="text-decoration-none text-light">
+        <div class="toursubdiv">
+        
+    </div>
+       <div class="col-md-12 p-3 bg-dark text-light ">
+        <h3>{{ b.title }}</h3>
+        <h3>{{ b.type }}</h3>
+        <p>{{ b.noofdays }}</p>
+        
+
+        
+    
+          
+        
+        <img src="/media/{{ b.Image }}" width="100%" height="300px" class="rounded-3" />
+
+
+        
+            
+        
+        <p>{{ b.}}<span>&#8377</span>({{ b.price }})</p>
+        
+
+        
+        
+
+     </div> 
+        
+    </a>
+    <!--end colored-->
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+

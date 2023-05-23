@@ -1,0 +1,188 @@
+{% load static %}
+<html>
+<head>
+   <title>Tour and Travels</title>
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet" />
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <link href="{% static 'tourandtravels.css' %}" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <link href="{% static 'ihover/src/ihover.css' %}" rel="stylesheet"/>
+      
+      
+
+      <script>
+         $(document).ready(function() {
+ 
+             $('.counter').each(function () {
+                 $(this).prop('Counter',0).animate({
+                     Counter: $(this).text()
+             }, {
+                 duration: 4000,
+                 easing: 'swing',
+                 step: function (now) {
+                 $(this).text(Math.ceil(now));
+                 }
+             });
+         });
+ 
+     });  
+     </script>
+     <script>
+      
+      $(document).ready(function(){
+         AOS.init();
+      });
+     </script>
+     
+</head>
+
+<body>
+   <div class="container-fluid">
+      <div class="row " id="topheader1">
+
+
+         <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+            <div class="offcanvas-header">
+                <h6 class="offcanvas-title d-none d-sm-block"></h6>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-0">
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start " id="menu">
+                  <li class="nav-item"><a href="/tourandtravels/" class="nav-link text-truncate">
+                  <i class="fa-solid fa-house"></i><span class="ms-1 d-none d-sm-inline">Home</span></a></li>
+                  <li class="nav-item"><a href="/tour/" class="nav-link text-truncate"><i class="fa-solid fa-plane"></i><span class="ms-1 d-none d-sm-inline">Tour</span></a></li>
+                  {% if user.is_authenticated %}
+                  <li class="nav-item"><a href="/booking/" class="nav-link text-truncate"><i class="fa-solid fa-book"></i><span class="ms-1 d-none d-sm-inline">Booking</span></a></li>
+                  {% else %}
+                  <li class="nav-item"><a href="/login/?next=/booking/" class="nav-link text-truncate"><i class="fa-solid fa-book"></i><span class="ms-1 d-none d-sm-inline">Booking</span></a></li>
+                  {% endif %}
+                  <li class="nav-item"><a href="/Destinations" class="nav-link text-truncate"><i class="fa-solid fa-location-dot"></i><span class="ms-1 d-none d-sm-inline">Destinations</span></a></li>
+                  <li class="nav-item"><a href="/blogs/"  class="nav-link text-truncate"><i class="fa-solid fa-blog"></i><span class="ms-1 d-none d-sm-inline">Blogs</span></a></li>
+                  
+                  <li class="nav-item"><a href="/contact/" class="nav-link text-truncate"><i class="fa-solid fa-address-book"></i><span class="ms-1 d-none d-sm-inline">Contact</span></a></li>
+                  <li class="nav-item"><a href="/FAQs/" class="nav-link text-truncate"><i class="fa fa-question-circle"></i><span class="ms-1 d-none d-sm-inline">FAQs</span></a></li>
+                  <li class="nav-item"><a href="/aboutus/" class="nav-link text-truncate"><i class="fa-solid fa-person"></i><span class="ms-1 d-none d-sm-inline">Aboutus</span></a></li>
+                  
+                    
+                </ul>
+            </div>
+        </div>
+       
+        
+
+         <!--footer end-->
+         <div class="col-md-3">
+            <a href="/tourandtravels/" class="text-light"><h2 class="text-light">Star<span class="fw-bold"> Tour </span></h2></a>
+         </div>
+
+         <div class="col-md-9">
+             <!-- toggler -->
+        <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+         <i class="fa-solid fa-bars fs-3 text-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+         
+     </button>
+            <nav id="nav">
+               <ul class="nav">
+                  
+                  {% if user.is_authenticated %}
+                  
+                  <li><a href="" class="nav-link text-light">Hi, {{ user.username }}</a></li>
+                  <li><a href="/mybookings/" class="nav-link text-light">Manage Bookings</a></li>
+                  <li><a href="/logout/" class="nav-link text-light">Logout</a></li>
+                  {% else %}
+                  <li><a href="/signup/" class="nav-link text-light">Register</a></li>
+                  <li><a href="/login/" class="nav-link text-light">Login</a></li>
+                  {% endif %}
+                  
+               
+               
+               </ul>
+            </nav>
+         </div>
+      </div>
+     
+         {% block content %}
+         {% endblock %}
+         
+<div class="row bg-dark text-light">
+   <div class="col-md-4">
+      <h1>Our Awards</h1>
+      <p>Travel & Hospitality awards is a global recognition programme for the travel industry recognising the very best hotels, tour operators.</p>
+      <img src="{% static 'f.png' %}" width="100" height="100px" class="rounded-3" />
+
+   </div>
+
+   <div class="col-md-4">
+      <h1>Contact Info</h1>
+      <div class="col-md-12">
+         <i class="fa-solid fa-mobile"></i><span>1-567-124-44227</span>
+         <div class=col-md-12><i class="fa-solid fa-location-dot"></i>
+            <span>Model town phase 1</span> <br>
+
+
+            <p> <i class="fa-solid fa-clock"></i>
+               <span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</span>
+            </p>
+
+         </div>
+         <i class="fa-brands fa-twitter fs-1 text-info ms-3"></i>
+         <i class="fa-brands fa-facebook fs-1 text-primary ms-3"></i>
+         <i class="fa-brands fa-youtube fs-1 text-danger ms-3"></i>
+         <i class="fa-brands fa-pinterest fs-1 text-danger ms-3"></i>
+         <i class="fa-brands fa-instagram fs-1 text-danger ms-3"></i>
+
+      </div>
+   </div>
+
+
+
+   <div class="col-md-4">
+      <h1>Recent Trips</h1>
+
+      <div class="col-md-12">
+
+
+         
+         <img src="{% static 'b.jpg' %}" width="100" height="100px" />
+         <img src="{% static 'p.jpg'%}" width="100" height="100px" />
+         <img src="{% static 'lk.jpg'%}" width="100" height="100px" />
+         <img src="{% static 'sp.jpg' %}" width="100" height="100px" />
+         <img src="{% static 'rd.jpg' %}" width="100" height="100px" />
+         <img src="{% static 'rv.jpg' %}" width="100" height="100px" />
+      </div>
+   </div>
+   <hr>
+   <div class="row">
+      <div class="col-md-8">
+         <h5>© Copyright Grand Tour Theme Demo - Theme by ThemeGoods</h5>
+      </div>
+      <div class="col-md-4">
+         <nav id="nav">
+            <ul class="nav">
+               <li><a href="#" class="nav-link text-light">Home</a></li>
+               <li><a href="#" class="nav-link text-light">tour</a></li>
+               <li><a href="#" class="nav-link text-light">blog</a></li>
+               <li><a href="#" class="nav-link text-light">purchase theme</a></li>
+            </ul>
+         </nav>
+      </div>           
+   </div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+
+</body>
+
+</html>

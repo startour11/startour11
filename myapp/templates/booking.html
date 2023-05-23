@@ -1,0 +1,101 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="row p-3"></div>
+       <img src="{% static 'an.jpg' %}" width="100%" height="300px" class="rounded-3" />
+       </div>
+          <div class="col-md-4">
+            <div class="row p-3"></div>
+               <img src="{% static 'io.jpg' %}" width="100%" height="300px" class="rounded-3" />
+                </div>
+                <div class="col-md-4">
+                    <div class="row p-3"></div>
+                    <img src="{% static 'os.jpg' %}" width="100%" height="300px" class="rounded-3" />
+                    
+                     </div>
+                  </div> 
+
+<div claas="container-fluid">
+    <div class="row p-5">
+        <div class="col-md-6 offset-3">
+        <h2>Book a Tour</h2>            
+    <form action="/insertbooking/" method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+         <div class="row">
+        <input type="hidden" name="userid" value="{{ user.id }}" />
+        <input type="hidden" name="status" value="Booked" />
+    <div class="col-md-6">
+    <label>First Name</label>
+    <input type="text" name="FirstName" class="form-control" />
+    </div>
+    <div class="col-md-6">
+    <label>Last name</label>
+    <input type="text" name="LastName" class="form-control" />
+    </div>
+    
+
+
+        
+    
+        <div class="col-md-6">
+            <label>Contact Number</label>
+            <input type="tel" placeholder="Phone" name="ContactNumber" class= "p-2 form-control">
+        </div>
+        <div class="col-md-6">
+            <label>Email</label>
+            <input type="Email" placeholder="Email" name="EmailId" class="p-2 form-control"/>
+            </div>
+            
+        <div class="col-md-6">
+            <label>No of Adults</label>
+            <input type="Number" placeholder="No of Persons" name="No_of_Adults" class="p-2 form-control"/>
+            </div>
+            
+        <div class="col-md-6">
+            <label>No of Children(Below 15 years)</label>
+            <input type="Number" placeholder="No of Children" name="No_of_Children" class="p-2 form-control"/>
+            </div>
+        
+        <div class="col-md-12">
+        <label>Select tour</label>
+           <select class="form-control" name="Tourtype">
+              <option value="">-Select Tour-</option>    
+             {% for tour in t %}
+              <option>{{ tour.title }}</option>
+              {% endfor %}
+        </select>
+</div>
+
+        <div class="col-md-6">
+            <label>Check in Date</label>
+            <input type="date" placeholder="Checkin"  name="CheckIn" class="p-2 form-control">
+            </div>    
+        
+        <div class="col-md-6">
+            <label>Check out Date</label>
+            <input type="date" placeholder="Check out" name="Checkout" class="p-2 form-control"/>
+            </div>   
+        <div class="col-md-6">
+                <label>Location</label>
+                <input type="" placeholder="Location" name="Location" class="p-2 form-control"/>
+                </div>       
+            <div class="col-md-12">
+                <label>Special instructions if any</label>
+                   <textarea name="instructions" class="form-control" placeholder="Special Instructions"></textarea>
+        </div>
+            <div class="col-md-6">
+          
+                            <button class="btn btn-danger mt-2">Book Tour</button>
+                         
+                        
+         
+          </div>
+          </div> 
+          </form>             
+          </div>
+          </div> 
+{% endblock %}

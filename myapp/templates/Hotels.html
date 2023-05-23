@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div class="row p-5">
+    <div class="col-md-12">
+        <h2>hotels</h2>
+    </div>
+
+{% for b in h %}
+<div class="col-md-6 p-3 hoteldiv">
+    <!--colored-->
+    <a href="/hoteldetail/{{ b.id }}" class="text-decoration-none text-dark">
+        <div class="hotelsubdiv">
+        <img src="/media/{{ b.photo1 }}" width="100%" height="250" />
+    </div>
+       <div class="col-md-12 p-3 bg-dark ">
+        <h3>{{ b.name }}</h3>
+        <p>{{ b.location }} ({{ b.state }})</p>
+        
+       </div> 
+        
+    </a>
+    <!--end colored-->
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+

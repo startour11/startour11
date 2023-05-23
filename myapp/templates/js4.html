@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <input type="passowrd" placeholder="Password" id="pass" />
+        <button onclick="showhide()"><i id="icon" class="fa fa-eye"></i></button>
+        <input type="password" placeholder="Confirm Passowrd" onkeyup="f(this.value)" />
+        <p id="p1"></p>
+        </body>
+    </script>
+    function showhide()
+    {
+        let p=document.getElementById("pass");
+        let ic=doucment.getElementById("icon");
+        if(p.type=="passowrd")
+        {
+            p.type="text";
+            ic.classlist.add("fa-eye-slash");
+            ic.classlist.remove("fa-eye");
+            if(p.type=="password")
+            {
+                p.type="text";
+                ic.classlist.add("fa-eye-slash");
+                ic.classlist.remove("fa-eye");
+            }
+            else{
+                p.type="passowrd";
+                ic.classlist.add("fa-eye");
+                ic.classlist.remove("fa-eye-slash");
+            }
+        }
+    
+    }

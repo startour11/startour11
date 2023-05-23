@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div claas="container-fluid">
+    <div class="row p-5">
+        <div class="col-md-6 offset-3 text-success text-center" data-aos="flip-left">
+        <img src="{% static 'tick.webp' %}" height="150" width="150" data-aos="fade-up" />
+            <h1 class="text-danger" data-aos="zoom-in">Congratulations !!</h1>
+           <h2> Thank You for booking with us. We will contact you soon.<h2>
+            <form action="{% url 'payment' %}" method="POST">
+                {% csrf_token %}
+                  <input type="hidden" name="name" value="{{ i.FirstName }}" />
+                  <input type="hidden" name="provider_order_id" value="{{ i.userid }}">
+                  <input type="hidden" name="bookingid" value="{{ i.id }}" />
+                  <input type="hidden" name="amount" value="100" />
+                  <button class="btn btn-info">Pay </button>
+           </form>
+          </div>        
+          </div>
+          </div> 
+{% endblock %}

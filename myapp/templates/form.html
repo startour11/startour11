@@ -1,0 +1,65 @@
+{% load static %}
+<html>
+   <head>
+         <title>Forms</title>
+         <link href="{% static 'style.css' %}" type="text/css"
+         rel="stylesheet" />
+         <link href="{% static 'css/bootstrap.min.css' %}" 
+         rel="stylesheet" />
+         <link href="{% static 'css/bootstrap-grid.min.css' %}"
+         rel="stylesheet" />
+      </head>
+      <body>
+         <div class="container-flud">
+            <div class="row">
+                <div class="col-md-6 offset-3">
+<form>
+<label>Name <span class="text-danger"></span></label>
+<input type="text" class="form-control" placeholder="Enter your Name" pattern="[A-Za-z]*" required />
+<label>Phone No.</label>
+<input type="tel" class="form-control" placeholder="Enter No." maxlength="10" patterns="[6|7|8|9][0-9]{9}" />
+<div>
+<label>Email</label>
+<input type="email" class="form-control" required />
+<label>Password</label>   
+</div class="input-group">
+<input type="password" class="form-control" />
+<span class="input-group-text"><i class="fa fa-eye"></i></span>
+<div>
+<label>Address></label>  
+<textarea class="form-control"></textarea>
+<label>Gender</label>
+<label>Male</label>
+<input type="radio" name="gender"/>
+<label>Female</label>
+<input type="radio" name="gender"/>
+</div>
+<label>Course</label>
+<select class="form-control">
+      <option value="">-Select Course-</option>    
+      <optain>HTML</optain>
+      <optain>CSS</optain>
+      <optain>Python</optain>
+      <option>PHP</option>
+      <option>C++</option>
+</select>
+<label>Picture</label>
+<input type="file" class="form-control" accept=".jpg,.png,.pdf,.web" />
+<label>Date</label>
+<input type="date" class="form-control" />
+</label>Time</label>
+<input type="time" class="form-control" />
+<input type="checkbox" />
+<label>I accept the terms</label>
+<br/>
+<!--input type="submit"-->
+<button type="submit" class="btn btn-success">Submit</button>
+<input type="reset" class="btn btn-danger" />
+</form>
+<div>
+   
+
+</div>
+</div>
+</body>
+

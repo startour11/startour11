@@ -1,0 +1,304 @@
+{% load static %}
+<html>
+<head>
+   <title>Tour and Travels</title>
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/bootstrap.grid.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'tourandtravels.css' %}" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <div class="container-fluid">
+      <div class="row " id="topheader">
+         <!--footer end-->
+         <div class="col-md-3">
+            <h2 class="text-light">G <span class="fw-bold"> Tour </span></h2>
+         </div>
+         <div class="col-md-9">
+            <nav id="nav">
+               <ul class="nav">
+                  <li><a href="#" class="nav-link text-light">Home</a></li>
+                  <li><a href="#" class="nav-link text-light">tour</a></li>
+                  <li><a href="#" class="nav-link text-light">booking</a></li>
+                  <li><a href="#" class="nav-link text-light">destinations</a></li>
+                  <li><a href="#" class="nav-link text-light">pages</a></li>
+                  <li><a href="#" class="nav-link text-light">blog</a></li>
+                  <li><a href="#" class="nav-link text-light">shortcode</a></li>
+                  <li><a href="#" class="nav-link text-light">shop</a></li>
+                  <i class="fa fa-cart-shopping text-light mt-2 fs-4"></i>
+               </ul>
+            </nav>
+         </div>
+
+         <div class="col-md-10 offset-1 mt-5 pt-5">
+            <h1 class="text-center text-light"><span class="fw-bold"></span>Where do you want to go?</h1>
+            <p class="text-light text-center">Trips, experiences, and places. All in one service</p>
+            <form>
+               <input type="text" placeholder="destinations,city" id="t1" />
+               <input type="text" placeholder="any month" id="t2" />
+               <input type="text" placeholder="sort by date" id="t3" />
+               <input type="text" placeholder="search" id="t4" />
+               <button class="btn btn-danger">Search</button>
+            </form>
+         </div>
+
+
+      </div>
+      <div class="row mt-5">
+         <div class="col-md-6 offset-3">
+            <h1 class="text-center text-dark"><span class="fw-bold"></span>Popular Destinations</h1>
+            <h5 class="text-center text-dark"><span class="fw-bold"></span>World's best tourist destinations</h5>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-3">
+            <img src="{% static 'pp.jpeg' %}" width="100%" height="300px" class="rounded-3" />
+         </div>
+         <div class="col-md-3">
+            <img src="{%static 'll.jpg' %}" width="90%" height="300px" class="rounded-3" />
+         </div>
+         <div class="col-md-3">
+            <img src="{% static 'hh.jpg' %}" width="100%" height="300px" class="rounded-3" />
+         </div>
+         <div class="col-md-3">
+            <img src="{% static 'japan.jpg' %}" width="100%" height="300px" class="rounded-3" />
+         </div>
+      </div>
+      <div class="row mt-5">
+         <div class="col-md-6 offset-3">
+            <h1 class="text-center text-dark"><span class="fw-bold"></span>Best Value Trips</h1>
+            <h5 class="text-center text-dark"><span class="fw-bold"></span>Best offers trips from us</h5>
+         </div>
+         <div class="row my-5">
+            <div class="col-md-10 offset-1">
+               <div class="row ">
+                  <div class="col-md-4">
+                     <img src="{%static 'photo.jpeg'%}" width="100%" height="300px" class="rounded-3" alt="">
+                     <p class="text center bg-danger price">$5,000</p>
+                     <p class="fs-4 text center">French Autumn</p>
+                     <p>City Tours, Urban</p>
+                     <div class="statrs ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img src="{%static 'ph.jpeg'%}" width="100%" height="300px" class="rounded-3" alt="">
+                     <p class="text center bg-danger price">$6,000</p>
+                     <p class="fs-4 text center">Grand Switzerland</p>
+                     <p>Shopping, Mountain, Snow & Ice</p>
+                     <div class="statrs">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <img src="{%static 'ss.jpeg'%}" width="100%" height="300px" class="rounded-3" alt="">
+                     <p class="text center bg-danger price"><span class="text-decoration-line-through">$ 3000</span>
+                        $2,500 </p>
+                     <p class="fs-4 text center">Discover Japan</p>
+                     <p>City Tours, Iconic</p>
+                     <div class="statrs ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row mt-3">
+            <div class="col-md-6 offset-3">
+               <h1 class="text-center text-dark"><span class="fw-bold"></span>Why Choose Us</h1>
+               <h5 class="text-center text-dark"><span class="fw-bold"></span>Here are reasons you should
+                  plan
+                  trip with us</h5>
+            </div>
+            <div class="row my-5">
+
+
+               <div class="col-md-4">
+
+
+                  <img src="{% static 'm.png' %}" width="70%" height="200" />
+
+                  <h3>Handpicked Hotels</h3>
+                  <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                  </p>
+               </div>
+
+               <div class="col-md-4">
+
+                  <img src="{% static 'w.png' %}" width="70%" height="200px" />
+
+
+                  <h3>word class services</h3>
+                  <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                  </p>
+               </div>
+               <div class="col-md-4">
+                  <img src="{% static 'h.png' %}" width="70%" height="200" class="rounded-3" />
+
+                  <h3>Best price guarantee</h3>
+                  <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                  </p>
+               </div>
+            </div>
+
+         </div>
+         <div class="row mt-5">
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3SsK-cxlj_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         </div>
+         <div class="row mt-5">
+            <div class="col-md-6 offset-3">
+               <h1 class="text-center text-dark"><span class="fw-bold"></span>
+            </div>
+         </div> 
+         <div class="row mt-5">
+            <div class="col-md-6 offset-3">
+               <h1 class="text-center text-dark"><span class="fw-bold"></span>Articles & Tips
+               </h1>
+               <h5 class="text-center text-dark"><span class="fw-bold"></span>Explore some of the best tips from around
+                  the world </h5>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-10 offset-1">
+               <div class="row">
+
+                  <div class="col-md-4">
+                     <img src="{% static 'qq.jpg' %}" width="100%" height="300px" class="rounded-3" />
+                     <div class="border p-3">
+                        <h5>december 10,2016</h5>
+                        <h2>Memorial Day to Someone Told Me to Travel</h2>
+                        <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...</p>
+                        <div>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+
+
+
+                  <div class="col-md-4">
+                     <img src="{% static 'dd.jpeg' %}" width="100%" height="300px" class="rounded-3" />
+                     <div class="border p-3">
+                        <h5>december 10,2016</h5>
+                        <h2>7 Tips For Nomads On A Budget Trips</h2>
+                        <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic
+                           fingerstache...</p>
+
+                     </div>
+                  </div>
+
+
+
+
+                  <div class="col-md-4">
+                     <img src="{% static 'gg.jpg' %}" width="100%" height="300px" class="rounded-3" />
+                     <div class="border p-3">
+                        <h5>december 10,2016</h5>
+                        <h2>Taking A Travel Blog Victory Lap</h2>
+                        <p>Meh synth Schlitz, tempor duis single-origin coffee a next
+                           level ethnic fingerstache...</p>
+                     </div>
+                  </div>
+
+
+               </div>
+               </div>
+               </div>
+               <div class="row bg-dark text-light">
+                  <div class="col-md-4">
+                     <h1>Our Awards</h1>
+                     <p>London is a megalopolis of people, ideas and frenetic energy. The
+                        capital and largest city of the United Kingdom.
+                     </p>
+                     <img src="{% static 'f.png' %}" width="100" height="100px" class="rounded-3" />
+
+                  </div>
+
+                    <div class="col-md-4"> 
+                     <h1>Contact Info</h1>
+                     <div class="col-md-12">
+                        <i class="fa-solid fa-mobile"></i><span>1-567-124-44227</span>
+                              <div class=col-md-12><i class="fa-solid fa-location-dot"></i>
+                                 <span>184 Main Street East Perl Habour 8007</span>
+                                       
+                                      
+                                          <i class="fa-solid fa-clock"></i>
+                                          <span>Mon - Sat 8.00 - 18.00 SundayCLOSED</span>
+
+                                         </div>
+
+                                             
+                                        
+                                          <img src="{% static 'ff.png' %}" width="50" height="50px" />
+                                          <img src="{% static 'ins.png'%}" width="50" height="50px" />
+                                          <img src="{% static 'pin.png'%}" width="50" height="50px" />
+                                          <img src="{% static 'you.png' %}" width="50" height="50px" />
+                                          <img src="{% static 'twit.webp'%}" width="50" height="50px" />
+
+                                       </div>
+                                       </div>
+                                       
+                                    
+                                          
+                                          <div class="col-md-4">
+                                             <h1>Recent Trips</h1>
+                                             
+                                             <div class="col-md-12">
+                                                
+
+                                             <img src="{% static 'b.jpg' %}" width="100" height="100px" />
+                                             <img src="{% static 'p.jpg'%}" width="100" height="100px" />
+                                             <img src="{% static 'lk.jpg'%}" width="100" height="100px" />
+                                             <img src="{% static 'sp.jpg' %}" width="100" height="100px" />
+                                             <img src="{% static 'rd.jpg' %}" width="100" height="100px" />
+                                             <img src="{% static 'rv.jpg' %}" width="100" height="100px" />
+                                          </div>
+                                       </div>
+                                       <div class="row" >
+                                          <div class="col-md-8">
+                                          <h5>© Copyright Grand Tour Theme Demo - Theme by ThemeGoods</h5>
+                                           </div>
+                                             <div class="col-md-4">
+                                             <nav id="nav">
+                                                <ul class="nav">
+                                                   <li><a href="#" class="nav-link text-light">Home</a></li>
+                                                   <li><a href="#" class="nav-link text-light">tour</a></li>
+                                                   <li><a href="#" class="nav-link text-light">blog</a></li>
+                                                   <li><a href="#" class="nav-link text-light">purchase theme</a></li>
+                                                </ul>
+                                             </nav>
+                                             </div>
+                                             </div>
+                     
+                                          </div> 
+
+
+                              </div>
+                     </div> 
+                     </div>
+                  
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+{% load static %}
+<html>
+
+<head>
+   <title>Tour and Travels</title>
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/bootstrap.grid.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'tourandtravels.css' %}" rel="stylesheet" />
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+  
+</head>
+
+<body>
+   <div class="container-fluid">
+      <div class="row " id="topheader">
+         <!--footer end-->
+         <div class="col-md-3">
+            <h2 class="text-light">Star<span class="fw-bold"> Tours </span></h2>
+         </div>
+         <div class="col-md-9">
+            <nav id="nav">
+               <ul class="nav">
+                  <li><a href="/tourandtravels/" class="nav-link text-light">Home</a></li>
+                  <li><a href="/tour/" class="nav-link text-light">Tour</a></li>
+                  {% if user.is_authenticated %}
+                  <li><a href="/booking/" class="nav-link text-light">Booking</a></li>
+                  {% else %}
+                  <li><a href="/login/" class="nav-link text-light">Booking</a></li>
+                  {% endif %}
+                  
+                  <li><a href="/Destinations/" class="nav-link text-light">Destinations</a></li>
+                  <li><a href="/blogs/"  class="nav-link text-light">Blogs</a></li>
+                  
+                  <li><a href="/contact/" class="nav-link text-light">Contact</a></li>
+                  <li><a href="/FAQs/" class="nav-link text-light">FAQs</a></li>
+                  <li><a href="/aboutus/" class="nav-link text-light">Aboutus</a></li>
+                  
+                  {% if user.is_authenticated %}
+                  
+                  <li><a href="" class="nav-link text-light">Hi, {{ user.username }}</a></li>
+                  <li><a href="/logout/" class="nav-link text-light">Logout</a></li>
+                  {% else %}
+                  <li><a href="/signup/" class="nav-link text-light">Register</a></li>
+                  <li><a href="/login/" class="nav-link text-light">Login</a></li>
+                  {% endif %}
+                  
+               
+               
+               </ul>
+            </nav>
+         </div>
+
+         <div class="col-md-8 offset-2 mt-5 pt-5" data-aos="fade-up">
+            <h1 class="text-center text-light"><span class="fw-bold"></span>Where do you want to go?</h1>
+            <p class="text-light text-center">Trips, experiences, and places. All in one service</p>
+            <form class="d-flex ms-2"  method="get" action="/searchresult/">
+               <input type="text" name="qcity"  placeholder="Destinations,City"  class="form-control ms-2" id="t1" />
+               
+               <button class="btn btn-danger ms-2">Search</button>
+            </form>
+         </div>
+
+
+      </div>
+      <div class="row mt-5" data-aos="flip-left">
+         <div class="col-md-6 offset-3">
+            <h1 class="text-center text-dark"><span class="fw-bold"></span>Popular Destinations</h1>
+            <h5 class="text-center text-dark"><span class="fw-bold"></span>World's best tourist destinations</h5>
+         </div>
+      </div>
+      <div class="row p-3" data-aos="flip-left">
+         <div class="col-md-3" >
+            <div class="col-md-12" id="kerala">
+            <h4>KERALA</h4>
+         </div>
+         <p>Kerala is popular because of its backwater, beaches, greenery, Kerala cuisines, honeymoon places, handicraft, spices, etc. When you are on Kerala trips, you will understand why it holds such a special place among the various destinations in India for tourism.</p>
+         </div>
+         <div class="col-md-3">
+            <div class="col-md-12" id="jk">
+           
+            <h4>JAMMU & KASHMIR</h4>
+         </div>
+         <p>Though the 5 months between March and August are considered favorable for a Jammu and Kashmir holiday, the ideal time would be from March to June when the climate is pleasant.Foreigners only require a valid Indian visa.Kashmir is the northernmost geographical region of the Indian subcontinent. 
+
+         </p>
+         </div>
+         <div class="col-md-3">
+            <div class="col-md-12" id="hp">
+            
+            <h4>HIMACHAL PRADESH</h4>
+         </div>
+            <p>Himachal Pradesh is one of the top tourist destinations in India for its weather, attractions, activities, and food. Besides, the locals here are very friendly in nature.The best way for a Himachal tour is by road because you can witness the beautiful scenery.</p>
+         </div>
+         <div class="col-md-3">
+            <div class="col-md-12" id="guj">
+            
+            <h4>GUJRAT</h4>
+         </div>
+         <p>Gujarat tour packages offer opportunities to embrace the legacy of the exotic culture. Tourists cannot miss savouring the amazing food in Gujarat.Gujarat is located on the western coast of India and has the longest coastline of 1,600 km among all the states in the country.</p>
+         </div>
+      </div>
+      <div class="row mt-5" data-aos="flip-left">
+         <div class="col-md-6 offset-3">
+            <h1 class="text-center text-dark"><span class="fw-bold"></span>International Holiday Packages</h1>
+            <h5 class="text-center text-dark"><span class="fw-bold"></span>Best offers trips from us</h5>
+         </div>
+         <div class="row my-5">
+            <div class="col-md-10 offset-1">
+               <div class="row ">
+                  {% for t in t %}
+                  <div class="col-md-4">
+                     <img src="/media/{{ t.photo }}" width="100%" height="300px" class="rounded-3" alt="">
+                     <p class="text center bg-danger price">Starting from &#8377;{{ t.price }}</p>
+                     <p class="fs-5 text center">{{ t.name }}</p>
+                     <p>{{ t.no_of_days_nights }}</p>
+                     <div class="statrs ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                     </div>
+                  </div>
+                  {% endfor %}
+                  
+               </div>
+            </div>
+         </div>
+         <div class="row mt-3" data-aos="flip-right">
+            <div class="col-md-6 offset-3">
+               <h1 class="text-center text-dark"><span class="fw-bold"></span>Why Choose Us</h1>
+               <h5 class="text-center text-dark"><span class="fw-bold"></span>Here are reasons you should
+                  plan
+                  trip with us</h5>
+            </div>
+            <div class="row my-5">
+
+
+               <div class="col-md-4">
+
+                  <img src="{% static 'm.png' %}" width="70%" height="200px" />
+
+                  <h3>Handpicked Hotels</h3>
+                  <p>Because we’ll make you more money with customer-focused, convincing copy that sells harder.
+                  </p>
+               </div>
+
+               <div class="col-md-4">
+
+                  <img src="{% static 'w.png' %}" width="70%" height="200px" />
+                  <div></div>
+
+
+                  <h3>word class services</h3>
+                  <p>Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing.
+                  </p>
+               </div>
+               <div class="col-md-4" data-aos="flip-up">
+                  <img src="{% static 'h.png' %}" width="70%" height="200" class="rounded-3" />
+
+                  <h3>Best price guarantee</h3>
+                  <p>Because we’re chosen by professionals. We’re the ‘go-to copywriters’ for dozens of UK marketing agencies.
+                  </p>
+               </div>
+            </div>
+
+         </div>
+         <div class="row mt-5"  data-aos="flip-up">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3SsK-cxlj_w"
+               title="YouTube video player" frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+               allowfullscreen></iframe>
+         </div>
+         <div class="row mt-5" data-aos="flip-right">
+            <div class="col-md-6 offset-3">
+               <h1 class="text-center text-dark"><span class="fw-bold"></span>
+            </div>
+         </div>
+         <div class="row mt-3 p-5" data-aos="flip-right">
+            <div class="col-md-6 offset-3">
+               <h1 class="text-center text-dark"><span class="fw-bold"></span>Articles & Tips</h1>
+               <h5 class="text-center text-dark"><span class="fw-bold"></span>Explore some of the best tips from around the world </h5>
+            </div>
+         </div>
+         <div class="row" data-aos="flip-right">
+            <div class="col-md-10 offset-1">
+               <div class="row">
+
+                  <div class="col-md-4" style="height:500px;">
+                     <img src="{% static 'hr.jpg' %}" width="100%" height="300px" class="rounded-3" />
+                     <div class="border p-3">
+                        <h5>December 10,2023</h5>
+                        <h4>How To Get The Best Holiday Travel Deals</h4>
+                        <p>From finding the best hotels to booking group rates online, here’s what you need to know about sourcing travel deals this holiday season.</p>
+                        <div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4 data-aos="flip-up>
+                     <img src="{% static 'ab.jpg' %}" width="100%" height="300px" class="rounded-3" />
+                     <div class="border p-3">
+                        <h5>June 20,2023</h5>
+                        <h4>10 Must-Know Tips For Driving Abroad</h4>
+                        <p>Booking a trip, especially to a foreign country, is always an exhilarating experience. The thrill of planning your itinerary, researching things to do.</p>
+
+                     </div>
+                  </div>
+
+
+
+
+                  <div class="col-md-4"data-aos="flip-right">
+                     <img src="{% static 'rt.jpg' %}" width="100%" height="300px" class="rounded-3" />
+                     <div class="border p-3">
+                        <h5>May 10,2023 </h5>
+                        <h4>Detailed Road Trip Packing</h4>
+                        <p>Not sure what to bring on a road trip.This road trip packing list covers essential tips and the best things to pack on road trip.</p>
+                     </div>
+                  </div>
+
+
+               </div>
+            </div>
+         </div>
+         <div class="row bg-dark text-light">
+            <div class="col-md-4">
+               <h1>Our Awards</h1>
+               <p>Travel & Hospitality awards is a global recognition programme for the travel industry recognising the very best hotels, tour operators.</p>
+               <img src="{% static 'f.png' %}" width="100" height="100px" class="rounded-3" />
+
+            </div>
+
+            <div class="col-md-4" >
+               <h1>Contact Info</h1>
+               <div class="col-md-12">
+                  <i class="fa-solid fa-mobile"></i><span>1-567-124-44227</span>
+                  <div class=col-md-12><i class="fa-solid fa-location-dot"></i>
+                     <span>Model town phase 1</span> <br>
+
+
+                     <p> <i class="fa-solid fa-clock"></i>
+                        <span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</span>
+                     </p>
+
+                  </div>
+                  <i class="fa-brands fa-twitter fs-1 text-info ms-3"></i>
+                  <i class="fa-brands fa-facebook fs-1 text-primary ms-3"></i>
+                  <i class="fa-brands fa-youtube fs-1 text-danger ms-3"></i>
+                  <i class="fa-brands fa-pinterest fs-1 text-danger ms-3"></i>
+                  <i class="fa-brands fa-instagram fs-1 text-danger ms-3"></i>
+
+               </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+               <h1>Recent Trips</h1>
+
+               <div class="col-md-12">
+
+
+                  
+                  <img src="{% static 'b.jpg' %}" width="100" height="100px" />
+                  <img src="{% static 'p.jpg'%}" width="100" height="100px" />
+                  <img src="{% static 'lk.jpg'%}" width="100" height="100px" />
+                  <img src="{% static 'sp.jpg' %}" width="100" height="100px" />
+                  <img src="{% static 'rd.jpg' %}" width="100" height="100px" />
+                  <img src="{% static 'rv.jpg' %}" width="100" height="100px" />
+               </div>
+            </div>
+            <hr>
+            <div class="row">
+               <div class="col-md-8">
+                  <h5>© Copyright Grand Tour Theme Demo - Theme by ThemeGoods</h5>
+               </div>
+               <div class="col-md-4">
+                  <nav id="nav">
+                     <ul class="nav">
+                        <li><a href="#" class="nav-link text-light">Home</a></li>
+                        <li><a href="#" class="nav-link text-light">tour</a></li>
+                        <li><a href="#" class="nav-link text-light">blog</a></li>
+                        <li><a href="#" class="nav-link text-light">purchase theme</a></li>
+                     </ul>
+                  </nav>
+               </div>           
+            </div>
+
+         </div>
+
+
+      </div>
+   </div>
+   </div>
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+   AOS.init();
+ </script>
+
+</html>

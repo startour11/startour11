@@ -1,0 +1,97 @@
+{% load static %}
+<html>
+   <head>
+        <title>renovat</title>
+<link href="{% static 'css/bootstrap.min.css' %}" 
+rel="stylesheet"/>
+<link href="{% static 'css/bootstrap.grid.min.css' %}"
+ rel="stylesheet"/>
+ href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+   </head>
+   <body>
+<div class="container-fluid" >
+<div class="row bg-warning text-light p-2 ">  id="topheader">
+<div class="col-md-9 ps-5">
+<i class="fa-solid fa-mobile"></i>
+<spam>+962 837 482 374</spam>
+&nbsp;&nbsp;
+<i class="fa fa-envelope"></i>
+<spam>construction@example.com</spam>
+</div>
+<div>
+ <div class="col-md-3 text-center">
+ <a href="#">FAQ</a>
+ </div>
+</div>
+<!--footer end--> 
+<div class="col-md-7">
+   <img src="" />
+</div>
+<div class="col-md-5 p-2" >
+   nav id="nav">
+   <ul class="nav">
+   <li><a href="#" class="nav-link">Home</a></li>
+   <li><a href="#" class="nav-link">Service</a></li>
+   <li><a href="#" class="nav-link">Contact</a></li>
+   <li><a href="#" class="nav-link">Pages</a></li> 
+</ul>
+</nav>
+</div>
+</div>
+<!--header end-->
+ <div class="row" id="bannerimg">
+<div class="col-md-12" id="subbannering">
+<div class="col-md-7">
+<h3 class="text-warning fw-bold">Your Dream</h3>
+<h1 class="text-light fw-bold display-4">Is our responsibility</h1>
+<p class="text-light fs-3">Lorem ipsum color sit amet, consectetur adipisicing elit,sed do eilusmod tempor</p>
+<button class="btn btn-warning fw-bold text-light rounded-0 p-3"> Read More
+</button>
+</div>
+</div>
+</div>     
+<!--row end-->
+<div class="row p-4">
+<div class="col-md-4">
+   <div class="col-md-12 border">
+      <div class="p-3">
+         <h3>house renovation</h3>
+<span>Lorem ipsum dolor sit amit,consectetur adipisicing elit, sed do eilusmod tempor.</span>
+ </div>
+ <div class="p-3" bg-light border">
+ <button class="btn btn-primary">More Info</button>
+ </div>  
+</div>
+</div>
+<div class="col-md-4">
+   <div class="col-md-12 border">
+      <div class="p-3">
+         <h3>construction consultant</h3>
+         <span>lorem ipsum dolar sit amet, consectetur adipisicing elit,sed do eiusmod tempor.</span>
+      </div>
+<div class="p-3 bg-light border">
+<button class="btn btn-primary">More Info</button>
+</div>
+   </div>
+</div>
+<div class="col-md-4">
+   <div class="col-md-12 border">
+      <div class="p-3">
+<h3>general construction</h3>
+<span>lorem ipsum dolar sit amet, consectetur adipisicing elit,sed do eiusmod tempor.</span>
+      </div>
+      <div class="p-3 bg-light border">
+         <button class="btn btn-primary bg-grey">More Info</button>
+      </div>
+   </div class="p-3 bg-light border">
+   <button class="btn btn-primary bg-grey">More Info</button>
+</div>
+</div>
+<!--offset end-->
+<div class="row bg-dark text-light text-center p-5">
+<div class="col-md-12">
+   <p>0 All rights reserved.Template designed by Bootstrapious.</p>
+</div>
+</div>
+</head>
+<body>

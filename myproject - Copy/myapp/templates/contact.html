@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+
+    <h5 class="text-center text-dark fw-bold my-3"><span class="fw-bold"></span>Just over a month into my trip and I
+        wonder how I’ve
+        changed, if at all. Certainly the experiences I’ve had and things I’ve seen have shaped me in someway.</h5>
+</div>
+<div class="d-flex justify-content-center my-4 ">
+    <i class="fa-brands fa-twitter fs-1 text-info ms-3"></i>
+    <i class="fa-brands fa-facebook fs-1 text-primary ms-3"></i>
+    <i class="fa-brands fa-youtube fs-1 text-danger ms-3"></i>
+    <i class="fa-brands fa-pinterest fs-1 text-danger ms-3"></i>
+    <i class="fa-brands fa-instagram fs-1 text-danger ms-3"></i>
+
+</div>
+<div>
+   
+
+    
+       <div class="col-md-8 offset-2">
+            <div class="row">
+                <div class="col-md-12">
+               <div class="row p-5">
+          <label class="fw-bold">Full Name <span class="text-danger"></span></label>
+                    <input type="text" class="form-control" placeholder="Enter your Name" pattern="[A-Za-z]*"
+                        required />
+                    <label class="fw-bold">Email Address</label>
+                    <input type="email" class="form-control" required />
+                    <label class="fw-bold">Phone Number<Address></Address></label>
+                    <input type="tel" class="form-control" placeholder="Enter No." maxlength="10"
+                        patterns="[6|7|8|9][0-9]{9}" />
+                    <div>
+                    </div class="input-group">
+                    <div>
+                        <label class="fw-bold">Interested In</label>
+                        <textarea name="" id="" cols="2" rows="1" class="form-control" placeholder="Message"></textarea>
+                        <div>
+                            <label class="fw-bold">Number of Person </label>
+                            <textarea name="" id="" cols="2" rows="1" class="form-control"
+                                placeholder="Message"></textarea>
+                            <div>
+
+                                <button class="btn btn-danger mt-2">Send Message</button>
+                                <div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-top text-light" id="contact-left">
+               <h1>California</h1>
+
+            </div>
+            
+                <div class="col-md-6 d-flex justify-content-center align-items-top text-light" id="contact-right">
+                    <h1>London</h1>
+                    
+                </div>
+                <div class="row p-5">
+                    <div class="col md-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13793.739039715072!2d74.95035922987138!3d30.196136547555344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39172d51a8f04251%3A0xdae960bd77576a49!2sPhase-1%2C%20Model%20Town%2C%20Bathinda%2C%20Punjab%20151005!5e0!3m2!1sen!2sin!4v1682651701443!5m2!1sen!2sin" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+            </div>
+  
+               
+    </section>
+    {% endblock %}
